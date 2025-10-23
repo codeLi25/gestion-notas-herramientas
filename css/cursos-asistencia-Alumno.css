@@ -1,0 +1,304 @@
+
+.titulo-seccion {
+  font-family: "Poppins", "Segoe UI", sans-serif;
+  font-size: 1.4rem;
+  font-weight: 500;
+  color: #1e3a8a;
+  text-transform: capitalize;
+  position: relative;
+  display: inline-block;
+  margin-bottom: 1.8rem;
+  letter-spacing: 0.5px;
+  transition: color 0.3s ease;
+}
+
+.titulo-seccion::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -8px;
+  width: 30%;
+  height: 4px;
+  background: linear-gradient(90deg, #2563eb, #60a5fa);
+  border-radius: 2px;
+  transition: width 0.3s ease;
+}
+
+.titulo-seccion:hover {
+  color: #1d4ed8;
+}
+
+.titulo-seccion:hover::after {
+  width: 100%;
+}
+
+.titulo-navbar {
+  font-family: "Poppins", "Segoe UI", sans-serif;
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #1e3a8a;
+  letter-spacing: 0.6px;
+  position: relative;
+  display: inline-block;
+  transition: transform 0.25s ease, opacity 0.25s ease;
+  text-transform: uppercase;
+}
+
+
+.grid-cursos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
+}
+
+.curso-card {
+  background: white;
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+  cursor: pointer;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  border: 1px solid #f3f4f6;
+}
+
+.curso-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+}
+
+.curso-img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+}
+
+.curso-info {
+  padding: 1rem 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.curso-nombre {
+  color: #2563EB;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.curso-docente {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.icono-docente {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 1px solid #d1d5db;
+}
+
+.curso-docente p {
+  color: #4B5563;
+  font-size: 0.9rem;
+}
+
+.curso-ver {
+  font-size: 0.9rem;
+  color: #6B7280;
+  margin-top: 0.4rem;
+}
+
+/* ====== ESTILOS DETALLE DE CURSOS ====== */
+
+.titulo-seccion-notas {
+  font-family: "Poppins", "Segoe UI", sans-serif;
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: #1e3a8a;
+  text-align: center;
+  margin-bottom: 2rem;
+  position: relative;
+  letter-spacing: 0.5px;
+  background: linear-gradient(90deg, #2563eb, #60a5fa);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-transform: uppercase;
+
+}
+
+.titulo-seccion-notas::after {
+  content: "";
+  position: absolute;
+  bottom: -8px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 120px;
+  height: 3px;
+  background: linear-gradient(90deg, #3b82f6, #60a5fa);
+  border-radius: 2px;
+  transition: width 0.3s ease;
+}
+
+.titulo-seccion-notas:hover::after {
+  width: 180px;
+}
+
+@media (max-width: 640px) {
+  .titulo-seccion-notas {
+    font-size: 1.4rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .titulo-seccion-notas::after {
+    width: 80px;
+  }
+}
+
+.detalle-curso {
+  background: #ffffff;
+  border-radius: 1rem;
+  padding: 1.5rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  border: 1px solid #f3f4f6;
+}
+
+.grid-bimestres {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 1rem;
+}
+
+.bimestre-card {
+  background: #fff;
+  border-radius: 14px;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  cursor: pointer;
+  overflow: hidden;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  height: 200px;
+}
+
+.bimestre-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 14px 14px rgba(0, 0, 0, 0.15);
+}
+
+.bimestre-img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+}
+
+.bimestre-text {
+  display: block;
+  padding: 0.75rem 0;
+  font-weight: 600;
+  color: #2563EB;
+  background: #EFF6FF;
+  font-size: 0.95rem;
+  border-top: 1px solid #e5e7eb;
+}
+
+#detalle-bimestre {
+  margin-top: 1rem;
+}
+
+#detalle-bimestre .detalle-box {
+  background: #ffffff;
+  border-radius: 1rem;
+  padding: 1.5rem;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+}
+
+#detalle-bimestre p {
+  color: #374151;
+  line-height: 1.6;
+  font-size: 0.95rem;
+}
+
+.btn-volver {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 500;
+  color: #2563EB;
+  transition: color 0.25s ease;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-volver:hover {
+  color: #1d4ed8;
+}
+
+/* ====== VISTA DETALLE DE BIMESTRE ====== */
+.vista-detalle {
+  background: #ffffff;
+  border-radius: 1rem;
+  padding: 2rem 2.5rem;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+  border: 1px solid #f3f4f6;
+  animation: fadeIn 0.4s ease-in-out;
+}
+
+.vista-detalle h2 {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: #1e3a8a;
+  margin-bottom: 0.75rem;
+  text-align: center;
+}
+
+.vista-detalle h3 {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #2563eb;
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.vista-detalle .detalle-box {
+  background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+  border-radius: 1rem;
+  padding: 1.8rem;
+  text-align: center;
+  border: 1px solid #dbeafe;
+}
+
+.vista-detalle .detalle-box p {
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: #374151;
+  font-weight: 500;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.vista-detalle .btn-volver {
+  background: #e0f2fe;
+  padding: 0.5rem 1rem;
+  border-radius: 0.75rem;
+  color: #1e40af;
+  font-weight: 600;
+  box-shadow: 0 2px 6px rgba(37, 99, 235, 0.15);
+}
+
+.vista-detalle .btn-volver:hover {
+  background: #bfdbfe;
+  color: #1d4ed8;
+}
