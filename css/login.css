@@ -1,0 +1,53 @@
+body {
+    background-color: #ffffff;
+    font-family: 'Inter', sans-serif;
+}
+
+.image-side {
+    background-color: #E9F3FF;
+}
+
+.shadow-lg {
+    box-shadow: 0 15px 70px rgba(37, 99, 235, 0.08);
+}
+
+.shadow-lg:hover {
+    box-shadow: 0 20px 60px rgba(13, 85, 240, 0.12);
+    transform: translateY(-2px);
+    transition: all 0.3s ease;
+}
+
+input,
+button,
+form {
+    transition: all 0.25s ease-in-out;
+}
+
+input {
+    background-color: #F1F5FF;
+    border: 1px solid #D1D5DB;
+}
+
+input:focus {
+    background-color: #ffffff;
+}
+
+button {
+    transition: all 0.3s ease;
+    background-color: #E9F3FF;
+}
+
+button:hover {
+    transform: translateY(-1px);
+}
+
+button:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.3);
+}
+
+@media (max-width: 1024px) {
+    .image-side {
+        display: none;
+    }
+}

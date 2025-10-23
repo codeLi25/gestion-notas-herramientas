@@ -1,0 +1,291 @@
+.titulo-seccion-notas {
+    font-family: "Poppins", "Segoe UI", sans-serif;
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: #1e3a8a;
+    text-align: center;
+    margin-bottom: 2rem;
+    position: relative;
+    letter-spacing: 0.5px;
+    background: linear-gradient(90deg, #2563eb, #60a5fa);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-transform: uppercase;
+}
+
+.titulo-seccion-notas::after {
+    content: "";
+    position: absolute;
+    bottom: -8px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 120px;
+    height: 3px;
+    background: linear-gradient(90deg, #3b82f6, #60a5fa);
+    border-radius: 2px;
+    transition: width 0.3s ease;
+}
+
+.titulo-seccion-notas:hover::after {
+    width: 180px;
+}
+
+.grid-secciones {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+}
+
+.flex-botones {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    justify-content: center;
+}
+
+/* ====== CARDS DE SECCIONES ====== */
+.seccion-card {
+    border-radius: 1rem;
+    overflow: hidden;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+    border: 1px solid #f3f4f6;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    height: 220px;
+}
+
+.seccion-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+.seccion-card img {
+    width: 100%;
+    height: 140px;
+    object-fit: cover;
+}
+
+.seccion-card span {
+    margin-top: 0.75rem;
+    font-weight: 600;
+    color: #2563eb;
+    font-size: 1rem;
+}
+
+/* ====== CARDS DE ALUMNOS ====== */
+.alumno-card {
+    background: #ffffff;
+    border-radius: 1rem;
+    padding: 1rem;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+    border: 1px solid #f3f4f6;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.alumno-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.12);
+}
+
+.alumno-card p {
+    font-size: 0.95rem;
+    color: #374151;
+}
+
+.accion-img {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+}
+
+.detalle-curso {
+    background: #fff;
+    border-radius: 12px;
+    padding: 16px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+}
+
+.btn-volver {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-weight: 500;
+    color: #2563eb;
+    transition: color 0.25s ease;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+}
+
+.btn-volver:hover {
+    color: #1d4ed8;
+    background: #eff6ff;
+}
+
+/* ====== FORMULARIOS ====== */
+.form-alumno {
+    display: grid;
+    gap: 1rem;
+    max-width: 400px;
+    margin: 0 auto;
+    background: #ffffff;
+    padding: 1.5rem;
+    border-radius: 1rem;
+    border: 1px solid #e5e7eb;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.form-alumno label {
+    display: flex;
+    flex-direction: column;
+    font-weight: 500;
+    color: #1e3a8a;
+    font-size: 0.95rem;
+}
+
+.form-alumno input,
+.form-alumno select {
+    margin-top: 0.25rem;
+    padding: 0.5rem 0.75rem;
+    border: 1px solid #d1d5db;
+    border-radius: 0.5rem;
+    font-size: 0.95rem;
+}
+
+.form-alumno button {
+    padding: 0.5rem 1rem;
+    font-weight: 600;
+    border-radius: 0.5rem;
+    border: none;
+    cursor: pointer;
+}
+
+/* ====== COLORES BOTONES ====== */
+.btn-agregar {
+    background: #d1fae5;
+    color: #065f46;
+}
+
+.btn-agregar:hover {
+    background: #a7f3d0;
+}
+
+.btn-editar {
+    background: #fef3c7;
+    color: #78350f;
+}
+
+.btn-editar:hover {
+    background: #fde68a;
+}
+
+.btn-eliminar {
+    background: #fee2e2;
+    color: #991b1b;
+}
+
+.btn-eliminar:hover {
+    background: #fca5a5;
+}
+
+.grid-docentes {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 16px;
+}
+
+@media(min-width: 640px) {
+    .grid-docentes {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+}
+
+@media(min-width: 1024px) {
+    .grid-docentes {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 24px;
+    }
+}
+
+.seccion-card-docente {
+    border-radius: 16px;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    transition: transform 0.2s, box-shadow 0.2s;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.seccion-card-docente:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.seccion-card-docente img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #ddd;
+}
+
+.seccion-card-docente p {
+    text-align: center;
+    margin: 2px 0;
+}
+
+.titulo-lista-docentes {
+    font-family: Poppins, "Segoe UI", sans-serif;
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: rgb(30, 58, 138);
+    text-align: center;
+    margin-bottom: 2rem;
+    position: relative;
+    letter-spacing: 0.5px;
+    -webkit-text-fill-color: transparent;
+    text-transform: uppercase;
+    background: linear-gradient(90deg, rgb(37, 99, 235), rgb(96, 165, 250)) text;
+}
+
+.titulo-lista-docentes::after {
+    content: "";
+    position: absolute;
+    bottom: -8px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 120px;
+    height: 3px;
+    background: linear-gradient(90deg, #3b82f6, #60a5fa);
+    border-radius: 2px;
+    transition: width 0.3s ease;
+}
+
+.titulo-lista-docentes:hover::after {
+    width: 180px;
+}
+
+
+/* ====== RESPONSIVO ====== */
+@media (max-width: 640px) {
+    .seccion-card {
+        height: 200px;
+    }
+
+    .form-alumno {
+        max-width: 100%;
+    }
+}
