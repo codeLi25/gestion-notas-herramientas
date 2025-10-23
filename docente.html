@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Panel del Docente | Sistema de Notas</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+
+    <link rel="stylesheet" href="css/docente.css" />
+    <link rel="stylesheet" href="css/secciones-docente.css" />
+</head>
+
+<body class="font-['Inter'] bg-[#F9FAFB]">
+
+    <div class="flex h-screen overflow-hidden">
+
+        <!-- ===== SIDEBAR ===== -->
+        <aside class="sidebar bg-[#1E40AF] text-white w-64 flex flex-col items-center py-6 relative">
+            <div class="logo-section">
+                <img src="img/logoColegio.png" alt="Logo Colegio" />
+                <h2>Docente</h2>
+            </div>
+
+            <nav class="flex flex-col gap-4 w-full">
+                <button class="nav-btn active" data-section="secciones">
+                    <i class="ph ph-book text-xl"></i>
+                    <span>Notas</span>
+                </button>
+
+                <button class="nav-btn" data-section="asistencia">
+                    <i class="ph ph-calendar-check text-xl"></i>
+                    <span>Asistencia</span>
+                </button>
+            </nav>
+        </aside>
+
+        <!-- ===== CONTENEDOR PRINCIPAL ===== -->
+        <div class="flex flex-col flex-1 h-full overflow-hidden">
+
+            <!-- NAVBAR SUPERIOR -->
+            <header class="flex justify-between items-center bg-white shadow px-6 py-3">
+                <img src="img/logoColegio.png" alt="Logo Colegio" class="logo-header hidden" />
+                <h1 class="titulo-navbar">Panel del Docente</h1>
+
+                <div class="relative">
+                    <button id="userMenuBtn" class="flex items-center gap-2 focus:outline-none">
+                        <img src="img/usuario.png" alt="Usuario" class="w-9 h-9 rounded-full border" />
+                        <div class="text-right hidden sm:block">
+                            <p class="text-sm font-medium text-gray-800">Hola, <span id="nombreUsuario">Prof. Juan
+                                    López</span></p>
+                            <p class="text-xs text-gray-500" id="rolUsuario">Docente</p>
+                        </div>
+                        <i class="ph ph-caret-down text-gray-600"></i>
+                    </button>
+
+                    <!-- Dropdown -->
+                    <div id="userDropdown"
+                        class="hidden absolute right-0 mt-2 w-44 bg-white rounded-lg shadow-lg border border-gray-200 z-10">
+                        <button id="logoutBtn"
+                            class="w-full text-left px-4 py-2 text-gray-700 hover:bg-gray-100 flex items-center">
+                            <i class="ph ph-sign-out mr-2"></i> Cerrar sesión
+                        </button>
+                    </div>
+                </div>
+            </header>
+
+            <!-- CONTENIDO PRINCIPAL -->
+            <main id="contenido" class="flex-1 overflow-y-auto p-6 bg-[#F9FAFB]"></main>
+
+        </div>
+    </div>
+
+    <!-- JS -->
+    <script src="js/docenteJS/usuario.js"></script>
+    <script src="js/docenteJS/secciones.js"></script>
+    <script src="js/docenteJS/detallesSeccion.js"></script>
+    <script src="js/docenteJS/main.js"></script>
+</body>
+
+</html>

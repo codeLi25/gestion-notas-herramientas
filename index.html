@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login | Sistema de Notas</title>
+
+    <!-- Tailwind -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+
+    <link rel="stylesheet" href="css/login.css">
+</head>
+
+<body class="font-['Inter'] text-gray-800">
+
+    <div class="flex h-screen">
+        <!-- Lado izquierdo -->
+        <div class="image-side hidden lg:flex w-1/2 items-center justify-center relative overflow-hidden">
+            <div class="absolute inset-0 bg-[#E9F3FF]"></div>
+            <img src="img/login-portada.jpg" alt="Estudiantes felices"
+                class="relative z-10 w-4/5 max-w-lg rounded-xl shadow-xl">
+        </div>
+
+        <!-- Lado derecho (login) -->
+        <div class="w-full lg:w-1/2 flex flex-col justify-center items-center p-6 lg:p-12 bg-white">
+            <div class="w-full max-w-md bg-white rounded-2xl shadow-lg p-10 border border-gray-100">
+
+                <!-- Encabezado -->
+                <div class="text-center mb-6">
+                    <h1 class="text-3xl font-semibold text-[#2563EB]">Colegio LFC</h1>
+                    <p class="text-gray-600 mt-2">Acceso para estudiantes y docentes</p>
+                </div>
+
+                <!-- Texto guía -->
+                <p class="text-gray-500 text-sm mb-6 text-center">Ingrese sus datos para <span
+                        class="font-semibold text-gray-700">iniciar sesión</span>.</p>
+
+                <!-- Formulario -->
+                <form id="loginForm" class="space-y-5">
+
+                    <!-- Usuario -->
+                    <div>
+                        <label for="correo" class="block text-sm font-medium text-gray-700 mb-1">Código</label>
+                        <div class="relative">
+                            <i class="ph ph-user absolute left-3 top-3.5 text-gray-400 text-lg"></i>
+                            <input id="correo" name="correo" type="text" required
+                                class="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg bg-[#F1F5FF] focus:bg-white focus:ring-2 focus:ring-[#2563EB] focus:border-[#2563EB] outline-none transition"
+                                placeholder="U123456">
+                        </div>
+                        <p class="text-gray-400 text-xs mt-1 flex items-center">
+                            <i class="ph ph-info mr-1"></i> Ejemplo: U123456 (sin dominio)
+                        </p>
+                    </div>
+
+                    <!-- Contraseña -->
+                    <div>
+                        <label for="password" class="block text-sm font-medium text-gray-700 mb-1">Contraseña</label>
+                        <div class="relative">
+                            <i class="ph ph-lock-simple absolute left-3 top-3.5 text-gray-400 text-lg"></i>
+                            <input id="password" name="password" type="password" required
+                                class="w-full pl-10 pr-10 py-2 border border-gray-300 rounded-lg bg-[#F1F5FF] focus:bg-white focus:ring-2 focus:ring-[#2563EB] focus:border-[#2563EB] outline-none transition"
+                                placeholder="••••••••">
+                            <i id="togglePassword"
+                                class="ph ph-eye absolute right-3 top-3.5 text-gray-400 text-lg cursor-pointer"></i>
+                        </div>
+                    </div>
+
+                    <!-- Botón -->
+                    <div class="pt-4"> <!-- Agrega espacio arriba -->
+                        <button type="submit"
+                            class="w-full py-3 bg-[#E9F3FF] hover:bg-[#d7eaff] text-gray-900 rounded-lg font-semibold shadow-md hover:shadow-lg border border-[#cddff7] transition duration-300">
+                            Iniciar sesión
+                        </button>
+                    </div>
+                </form>
+
+                <!-- Error -->
+                <p id="mensajeError" class="text-red-500 text-sm text-center mt-4 hidden">
+                    Credenciales incorrectas
+                </p>
+
+            </div>
+        </div>
+    </div>
+
+    <script src="js/login.js"></script>
+
+</body>
+
+</html>
